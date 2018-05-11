@@ -1,0 +1,3 @@
+rootProject.name = 'RCTPdfThumbnails'
+
+include ':app'
