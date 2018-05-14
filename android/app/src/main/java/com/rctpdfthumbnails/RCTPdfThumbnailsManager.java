@@ -30,6 +30,7 @@ import java.util.ArrayList;
 public class RCTPdfThumbnailsManager extends ViewGroupManager<MyRecycler> {
     public static final String REACT_CLASS = "RCTPdfThumbnails";
     MyRecyclerAdapter  adapter;
+    String filePath;
     @Override
     public String getName() {
         // Tell React the name of the module
@@ -72,6 +73,11 @@ public class RCTPdfThumbnailsManager extends ViewGroupManager<MyRecycler> {
         Log.e("bfrejfbjer",prop);
         // Set properties from React onto your native component via a setter method
         // https://facebook.github.io/react-native/docs/native-components-android.html#3-expose-view-property-setters-using-reactprop-or-reactpropgroup-annotation
+    }
+    @ReactProp(name = "path")
+    public  void setPathProp(View view, String prop){
+        Log.e("somehsberjber", prop);
+        this.filePath = prop;
     }
     public void extractImages(Context context, String pdfFileName) throws IOException {
         File f = FileUtils.fileFromAsset(context, pdfFileName);

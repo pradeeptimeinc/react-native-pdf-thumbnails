@@ -76,7 +76,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyViewHolder> {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"Clicked",Toast.LENGTH_SHORT).show();
-                mMyRecycler.onReceiveNativeEvent();
+                mMyRecycler.onReceiveNativeEvent(holder.getAdapterPosition());
 
             }
         });

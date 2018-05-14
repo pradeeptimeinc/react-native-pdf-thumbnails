@@ -18,10 +18,11 @@ public class MyRecycler extends LinearLayout {
     public MyRecycler(Context context) {
         super(context);
     }
-    public void onReceiveNativeEvent() {
+    public void onReceiveNativeEvent(int index) {
         Log.e("ONREC", "JHBJJB");
         WritableMap event = Arguments.createMap();
         event.putString("message", "MyMessage");
+        event.putInt("index", index);
         ReactContext reactContext = (ReactContext)getContext();
         reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
                 getId(),
