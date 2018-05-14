@@ -22,7 +22,7 @@ public class MyRecycler extends LinearLayout {
         Log.e("ONREC", "JHBJJB");
         WritableMap event = Arguments.createMap();
         event.putString("message", "MyMessage");
-        event.putInt("index", index);
+        event.putInt("index", index+1);
         ReactContext reactContext = (ReactContext)getContext();
         reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
                 getId(),

@@ -78,10 +78,16 @@ public class RCTPdfThumbnailsManager extends ViewGroupManager<MyRecycler> {
     public  void setPathProp(View view, String prop){
         Log.e("somehsberjber", prop);
         this.filePath = prop;
+        try {
+            extractImages(view.getContext(),prop);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     public void extractImages(Context context, String pdfFileName) throws IOException {
-        File f = FileUtils.fileFromAsset(context, pdfFileName);
-        Uri uri = Uri.fromFile(f);
+        //File f = FileUtils.fileFromAsset(context, pdfFileName);
+        //Uri uri = Uri.fromFile(f);
+        Uri uri = Uri.parse(this.filePath);
         int pageNumber = 0;
         PdfiumCore pdfiumCore = new PdfiumCore(context);
         try {
