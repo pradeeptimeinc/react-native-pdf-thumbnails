@@ -16,7 +16,7 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
-import com.rntbridgedemo.R;
+import com.rctpdfthumbnails.R;
 
 import java.util.ArrayList;
 
