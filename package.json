@@ -1,15 +1,22 @@
 {
   "name": "react-native-pdf-thumbnails",
-  "version": "0.0.1",
-  "private": true,
-  "main": "index.js",
-  "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+  "version": "3.0.3",
+  "description": "A react native PDF thumbnails component",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pradeeptimeinc/react-native-pdf-thumbnails.git"
   },
-  "dependencies": {},
-  "devDependencies": {},
-  "jest": {
-    "preset": "react-native"
-  }
+  "keywords": [
+    "react-component",
+    "react-native",
+    "android",
+    "ios",
+    "pdf"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "prop-types": "^15.5.10"
+  },
+  "peerDependencies": {}
 }
